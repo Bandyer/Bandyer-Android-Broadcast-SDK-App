@@ -1,0 +1,44 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/Broadcast/<get-record>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast/get-record.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/Broadcast/<get-roomToken>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast/get-room-token.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/Broadcast/<get-user>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast/get-user.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastException/<get-cause>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-exception/get-cause.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastException/<get-message>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-exception/get-message.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastJoinException/<get-cause>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-join-exception/get-cause.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastJoinException/<get-message>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-join-exception/get-message.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastJoinInvalidUrlException/<get-cause>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-join-invalid-url-exception/get-cause.html
+$dokka.location:com.bandyer.broadcast_sdk.broadcast/BroadcastJoinInvalidUrlException/<get-message>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.broadcast/-broadcast-join-invalid-url-exception/get-message.html
+$dokka.location:com.bandyer.broadcast_sdk.client/BroadcastClient/<get-broadcast>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-broadcast-client/get-broadcast.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<get-email>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/get-email.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<get-firstName>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/get-first-name.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<get-image>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/get-image.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<get-lastName>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/get-last-name.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<get-userAlias>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/get-user-alias.html
+$dokka.location:com.bandyer.broadcast_sdk.client/User/<set-email>/#kotlin.String?/PointingToDeclaration/com.bandyer.broadcast_sdk.client/-user/set-email.html
+$dokka.location:com.bandyer.broadcast_sdk.utils.logging/BroadcastCenterLogger.Companion/<get-BROADCAST_CLIENT>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.utils.logging/-broadcast-center-logger/-companion/get-b-r-o-a-d-c-a-s-t_-c-l-i-e-n-t.html
+$dokka.location:com.bandyer.broadcast_sdk.utils.logging/BroadcastCenterLogger/<get-priority>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.utils.logging/-broadcast-center-logger/get-priority.html
+$dokka.location:com.bandyer.broadcast_sdk.utils.logging/BroadcastCenterLogger/<get-target>/#/PointingToDeclaration/com.bandyer.broadcast_sdk.utils.logging/-broadcast-center-logger/get-target.html
+$dokka.location:com.bandyer.broadcast_sdk.utils//IO/#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/com.bandyer.broadcast_sdk.utils/-executors-kt/-i-o.html
+$dokka.location:com.bandyer.broadcast_sdk.utils//UI/#kotlin.Function0[kotlin.Unit]/PointingToDeclaration/com.bandyer.broadcast_sdk.utils/-executors-kt/-u-i.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter.Builder/<get-appId>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/-builder/get-app-id.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter.Companion/<get-instance>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/-companion/get-instance.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter.Companion/<set-instance>/#com.bandyer.broadcast_sdk.BroadcastCenterInterface?/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/-companion/set-instance.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<get-gson>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/get-gson.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<get-httpStack>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/get-http-stack.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<get-networkLogger>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/get-network-logger.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<set-gson>/#com.google.gson.Gson/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/set-gson.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<set-httpStack>/#okhttp3.OkHttpClient/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/set-http-stack.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenter/<set-networkLogger>/#com.bandyer.android_common.logging.NetworkLogger?/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center/set-network-logger.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenterInterface/<get-gson>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center-interface/get-gson.html
+$dokka.location:com.bandyer.broadcast_sdk/BroadcastCenterInterface/<get-httpStack>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-broadcast-center-interface/get-http-stack.html
+$dokka.location:com.bandyer.broadcast_sdk/Environment/<get-url>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-environment/get-url.html
+$dokka.location:com.bandyer.broadcast_sdk/EnvironmentImpl/<get-path>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-environment-impl/get-path.html
+$dokka.location:com.bandyer.broadcast_sdk/EnvironmentImpl/<get-query>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-environment-impl/get-query.html
+$dokka.location:com.bandyer.broadcast_sdk/EnvironmentImpl/<get-url>/#/PointingToDeclaration/com.bandyer.broadcast_sdk/-environment-impl/get-url.html
+com.bandyer.broadcast_sdk
+com.bandyer.broadcast_sdk.broadcast
+com.bandyer.broadcast_sdk.client
+com.bandyer.broadcast_sdk.utils
+com.bandyer.broadcast_sdk.utils.logging
+
