@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?><!--
+  ~ Copyright (C) 2020 Bandyer S.r.l. All Rights Reserved.
+  ~ See LICENSE.txt for licensing information
+  -->
+
+<resources>
+
+    <!-- Android Broadcast SDK App ID -->
+    <string name="app_id">mAppId_xxx</string>
+
+</resources>

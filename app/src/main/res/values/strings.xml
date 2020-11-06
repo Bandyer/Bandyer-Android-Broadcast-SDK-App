@@ -1,0 +1,26 @@
+<!--
+  ~  Copyright (C) 2020 Bandyer S.r.l. All Rights Reserved.
+  ~  See LICENSE.txt for licensing information
+  -->
+<resources>
+
+    <string name="app_name" translatable="false">Bandyer Broadcast SDK Showcase</string>
+    <string name="dialog_start_broadcast" translatable="false">Do you want to start broadcast?</string>
+    <string name="dialog_end_broadcast" translatable="false">Do you want to end broadcast?</string>
+    <string name="dialog_confirm_button" translatable="false">OK</string>
+    <string name="dialog_cancel_button" translatable="false">Cancel</string>
+
+    <string name="enable_camera" translatable="false">Enable camera</string>
+    <string name="disable_camera" translatable="false">Disable camera</string>
+    <string name="enable_microphone" translatable="false">Enable microphone</string>
+    <string name="disable_microphone" translatable="false">Disable microphone</string>
+    <string name="scan_broadcast_qr_code" translatable="false">Scan broadcast QR code</string>
+    <string name="reconnecting" translatable="false">Reconnecting&#8230;</string>
+    <string name="start_broadcast" translatable="false">Start Broadcast</string>
+    <string name="broadcast_recording_in_progress" translatable="false">broadcast recording in progress</string>
+    <string name="on_air" translatable="false">On air</string>
+    <string name="long_press_to_start_broadcast" translatable="false">Long press to start broadcast</string>
+    <string name="broadcast_recording" translatable="false">broadcast recording</string>
+    <string name="broadcast_connecting" translatable="false">connecting&#8230;</string>
+
+</resources>

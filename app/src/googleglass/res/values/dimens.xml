@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <dimen name="glass_card_margin">40dp</dimen>
+  <dimen name="glass_card_footer_margin">50dp</dimen>
+  <dimen name="glass_card_two_column_margin">30dp</dimen>
+  <dimen name="menu_text_size">64sp</dimen>
+  <dimen name="menu_text_margin">16dp</dimen>
+
+</resources>
