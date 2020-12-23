@@ -9,7 +9,7 @@ apply plugin: 'kotlin-android-extensions'
 
 def jUnitLibVersion = '4.13'
 def multiDexLibVersion = "2.0.1"
-def bandyerLibVersion = "1.0.0"
+def bandyerLibVersion = "1.0.1"
 def androidX = '1.1.0'
 def androidDesign = '1.2.1'
 def constraintLayoutVersion = "2.0.3"
@@ -84,6 +84,9 @@ dependencies {
     implementation 'androidx.camera:camera-lifecycle:1.0.0-beta11'
     implementation 'androidx.camera:camera-view:1.0.0-alpha18'
     implementation 'com.google.zxing:core:3.3.3'
+
+    /** Permission Utility **/
+    implementation 'com.github.quickpermissions:quickpermissions-kotlin:0.4.0'
 
     /*** Bandyer Android Broadcast SDK ***/
     implementation "com.bandyer:bandyer-android-broadcast-sdk:$bandyerLibVersion"

@@ -91,15 +91,6 @@ class BroadcastActivity : BaseBroadcastActivity(), CameraFeederChangeListener {
         videoStream!!.setMirror((capturer.video?.frameProvider as? CameraFrameProvider)?.currentCameraFeeder is CameraVideoFeeder.FRONT_CAMERA)
     }
 
-    override fun createCapturer() {
-        super.createCapturer()
-        with(capturer!!.video!!) {
-            val quality = frameProvider.getNearestCaptureQualitySupported(FrameQuality(640, 480, 30))
-            this.frameProvider.frameQuality = quality
-            this.frameDispatcher?.frameQuality = quality
-        }
-    }
-
     override fun onLocalPreviewStarted() = Unit
 
     override fun onFeederChanged(feeder: CameraVideoFeeder, switched: Boolean) {

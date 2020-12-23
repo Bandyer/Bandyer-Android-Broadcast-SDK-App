@@ -92,14 +92,6 @@ class BroadcastActivity : BaseBroadcastActivity() {
         startBroadcastLongPressHandler.removeCallbacksAndMessages(null)
     }
 
-    override fun createCapturer() {
-        super.createCapturer()
-        with(capturer!!.video!!) {
-            val quality = frameProvider.getNearestCaptureQualitySupported(FrameQuality(640, 480, 15))
-            this.frameProvider.frameQuality = quality
-            this.frameDispatcher?.frameQuality = quality
-        }
-    }
 
     override fun onLocalPreviewStarted() {
         info!!.visibility = View.VISIBLE

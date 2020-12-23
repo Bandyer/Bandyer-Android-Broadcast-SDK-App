@@ -4,6 +4,7 @@
  */
 package com.bandyer.demo_broadcast_sdk.broadcast
 
+import android.Manifest
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +22,7 @@ import com.bandyer.core_av.Stream
 import com.bandyer.core_av.capturer.Capturer
 import com.bandyer.core_av.capturer.audio.AudioController
 import com.bandyer.core_av.capturer.video.VideoController
+import com.bandyer.core_av.capturer.video.provider.FrameQuality
 import com.bandyer.core_av.publisher.BroadcastingException
 import com.bandyer.core_av.publisher.BroadcastingListener
 import com.bandyer.core_av.publisher.Publisher
@@ -40,6 +42,7 @@ import com.bandyer.demo_broadcast_sdk.broadcast.observers.BroadcastRoomObserver
 import com.bandyer.demo_broadcast_sdk.extensions.CameraCapturer
 import com.bandyer.demo_broadcast_sdk.extensions.capturer
 import com.google.android.material.snackbar.Snackbar
+import com.livinglifetechway.quickpermissions_kotlin.runWithPermissions
 
 abstract class BaseBroadcastActivity :
         AppCompatActivity(),
@@ -64,11 +67,12 @@ abstract class BaseBroadcastActivity :
     protected var isMicrophoneEnabled = true
     protected var isCameraEnabled = true
 
+
     private val reconnectingSnackbar by lazy {
         Snackbar.make(findViewById(android.R.id.content), resources.getString(R.string.reconnecting), Snackbar.LENGTH_INDEFINITE)
     }
 
-    private val broadcastingListener = object: BroadcastingListener {
+    private val broadcastingListener = object : BroadcastingListener {
         override fun onSuccess(broadcastId: String, isBroadcasting: Boolean) {
             info?.text = resources.getString(R.string.on_air)
             info?.visibility = View.VISIBLE
@@ -76,6 +80,7 @@ abstract class BaseBroadcastActivity :
 
         override fun onError(broadcastId: String?, isBroadcasting: Boolean, reason: BroadcastingException) {
             Toast.makeText(applicationContext, "Broadcasting error: $reason", Toast.LENGTH_LONG).show()
+            Log.e(this::class.java.simpleName, "Broadcasting error: ${reason}")
             finish()
         }
     }
@@ -119,17 +124,24 @@ abstract class BaseBroadcastActivity :
 
     private fun leaveBroadcast() {
         Toast.makeText(applicationContext, "Broadcast left!", Toast.LENGTH_SHORT).show()
+        Log.d(this::class.java.simpleName, "Broadcasting left")
         BroadcastClient.get().leave()
         BroadcastClient.get().removeObserver(this)
     }
 
-    protected open fun createCapturer() {
+
+    private fun createCapturer() = runWithPermissions(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO) {
         capturer = capturer(this) {
             video = camera()
             audio = default()
             observer = this@BaseBroadcastActivity
         }
         capturer!!.start()
+        with(capturer!!.video!!) {
+            val quality = frameProvider.getNearestCaptureQualitySupported(FrameQuality(1280, 720, 15))
+            this.frameProvider.frameQuality = quality
+            this.frameDispatcher?.frameQuality = quality
+        }
     }
 
     private fun createRoom(roomToken: RoomToken) {
@@ -145,7 +157,7 @@ abstract class BaseBroadcastActivity :
                 .addPublisherObserver(this)
                 .setCapturer(capturer)
 
-        publisher!!.setView(videoStream!!, object: OnStreamListener {
+        publisher!!.setView(videoStream!!, object : OnStreamListener {
             override fun onReadyToPlay(view: StreamView, stream: Stream) {
                 view.play(stream)
             }
@@ -159,7 +171,8 @@ abstract class BaseBroadcastActivity :
     override fun onBroadcastJoinSuccess(broadcast: Broadcast) = createRoom(broadcast.roomToken)
 
     override fun onBroadcastJoinError(reason: BroadcastJoinException) {
-        Toast.makeText(applicationContext, "Broadcast error!\n${reason.message}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, "Broadcast join error!\n${reason.message}", Toast.LENGTH_LONG).show()
+        Log.e(this::class.java.simpleName, "Broadcast join error: ${reason}")
         finish()
     }
 
@@ -190,6 +203,7 @@ abstract class BaseBroadcastActivity :
 
     override fun onRoomError(reason: String) {
         Toast.makeText(applicationContext, "Broadcast room error: $reason", Toast.LENGTH_LONG).show()
+        Log.e(this::class.java.simpleName, "Broadcast room error: ${reason}")
         finish()
     }
 
